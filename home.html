@@ -5,57 +5,98 @@
     <title>thanks for everything</title>
   </head>  
    <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body{
+            margin: 0;
             background: #e9f4ee;
             text-align: left;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
+
         header{
             text-align: center;
             padding: 20px;
-            margin:20px;
-            background:linear-gradient(to right, #2eb2bb, #3ed3b3d5) ;
+            margin: 20px;
+            background:linear-gradient(to right, #2eb2bb, #3ed3b3d5);
             border-radius: 20px;
         }
+
         header ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
         header li {
-         display: inline;
-         margin-right: 20px;
-         font-size: 20px;
+            display: inline-block;
+            font-size: clamp(16px, 2vw, 20px);
         }
 
         header a {
-         text-decoration: none;
-         font-size: 20px;
-          color: black;
+            text-decoration: none;
+            font-size: clamp(16px, 2vw, 20px);
+            color: black;
         }
 
-         header a:hover {
-         color: #38e7a4;
+        header a:hover {
+            color: #38e7a4;
         }
 
         section{
             background-color: rgba(0, 255, 255, 0.171);
             background-image:url("IMG-20260713-WA0014.jpg");
+            background-size: cover;
+            background-position: center;
             padding: 20px;
-            margin:20px; 
-            height: max-content ;
+            margin:20px;
+            min-height: max-content;
             overflow: hidden;
             border: solid;
             border-radius: 20px;
-            overflow: hidden;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: clamp(16px, 2vw, 20px);
+            line-height: 1.6;
         }
+
         footer{
-            margin: 20px; 
+            margin: 20px;
             padding: 20px;
             background-color: rgba(0, 255, 255, 0.171);
             border-radius: 20px;
-            border: solid;  
+            border: solid;
+            font-size: clamp(16px, 2vw, 20px);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                text-align: left;
+            }
+
+            header, section, footer {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            header ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            section, footer {
+                font-size: 1rem;
+            }
         }
     </style>
     <body>
